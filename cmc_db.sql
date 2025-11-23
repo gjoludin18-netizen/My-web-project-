@@ -1,0 +1,35 @@
+
+CREATE DATABASE cmc_db;
+USE cmc_db;
+
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(100) NOT NULL,
+    lastname VARCHAR(100) NOT NULL,
+    Age INT NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    Year_of_Level VARCHAR(20) NOT NULL,
+    Status VARCHAR(20) NOT NULL,
+    Province VARCHAR(100) NOT NULL,
+    Municipality VARCHAR(100) NOT NULL,
+    Baranggay VARCHAR(100) NOT NULL,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+-
+CREATE TABLE records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Course VARCHAR(100) NOT NULL,
+    Section VARCHAR(100) NOT NULL,
+    Room VARCHAR(100) NOT NULL,
+    Task VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE events (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    participantname VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL
+);
