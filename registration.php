@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      background-color: aqua;
+      display:flex;
+      font-family: Arial, sans-serif;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      margin:0;
+    }
+    .form-container {
+      padding: 30px;
+      border-radius: 50px;
+      width: 900px;
+      text-align:center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      background: #ffffffcc;
+    }
+    h3 {
+      position:relative;
+      top:0;
+      color:blue;
+      font-size:36px;
+      margin: 0 0 10px 0;
+    }
+    h2 {
+      color:blue;
+      font-size:40px;
+      margin: 0 0 20px 0;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight:bold;
+      text-align:left;
+      width: 100%;
+      font-size:18px;
+    }
+    input,select {
+      padding: 10px;
+      width: 80%;
+      margin:15px;
+      border-radius: 10px;
+      border:1px solid #960707ff;
+      font-size:16px;
+    }
+    button {
+      margin-top: 25px;
+      background-color: #21c2f3;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size:18px;
+      width: 30%;
+    }
+    button:hover{
+      background-color:#1a9bcf;
+    }
+    .inline-group{
+      display:flex;
+      gap:10px;
+      width: 100%;
+      margin-bottom:10px;
+    }
+    .inline-group > div{ flex:5; }
+    nav { text-align:center; margin-bottom:20px; }
+    nav a{ color:blue; font-weight:bold; text-decoration:none; font-size:25; margin:0 8px;}
+    nav a:hover{ text-decoration:underline; }
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <nav>
+    <a href="index.php">Home</a>
+    <a href="registration.php">Register</a>
+    <a href="login_view.php">Login</a>
+  </nav>
+
+  <h2>Registration Form</h2>
+  <h3>CMC</h3>
+
+  <form action="registration_submit.php" method="post">
+    <div class="inline-group">
+      <div>
+        <label>Firstname:</label>
+        <input type="text" name="firstname" required>
+      </div>
+      <div>
+        <label>Lastname:</label>
+        <input type="text" name="lastname" required>
+      </div>
+      <div>
+        <label>Age:</label>
+        <input type="text" name="Age" required>
+      </div>
+    </div>
+
+    <div class="inline-group">
+      <div>
+        <label>Gender:</label>
+        <select name="gender">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Year of Level:</label>
+        <select name="Year_of_Level">
+          <option value="1">1st Year</option>
+          <option value="2">2nd Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Status:</label>
+        <select name="Status">
+          <option value="s">single</option>
+          <option value="m">married</option>
+          <option value="d">divorce</option>
+          <option value="p">deceased</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="inline-group">
+      <div>
+        <label>Province:</label>
+        <input type="text" name="Province" required>
+      </div>
+      <div>
+        <label>Municipality:</label>
+        <input type="text" name="Municipality" required>
+      </div>
+      <div>
+        <label>Baranggay:</label>
+        <input type="text" name="Baranggay" required>
+      </div>
+    </div>
+
+    <div class="inline-group">
+      <div>
+        <label>Username:</label>
+        <input type="text" name="username" required>
+      </div>
+      <div>
+        <label>Password:</label>
+        <input type="password" name="password" required>
+      </div>
+      <div></div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+</html>
